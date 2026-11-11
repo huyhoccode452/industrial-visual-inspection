@@ -1,0 +1,33 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Môi trường ảo
+.venv/
+venv/
+env/
+
+# Đóng gói / build
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test & coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Bí mật
+.env
+*.sqlite3
+.pt
+.pth
+test?.jpg
+mlruns/*
+node_modules/
