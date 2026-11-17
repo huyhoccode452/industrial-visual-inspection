@@ -75,8 +75,14 @@ The script stops with an error if a category has no files in the archive, so a t
 | 5 | Inference module, FastAPI, React dashboard, Docker |
 | 6 | Final tables and figures, README, technical report, demo |
 
+## License and attribution
+
+MVTec AD is copyright 2019 MVTec Software GmbH and is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). This project uses it for non-commercial research and education only. Anyone who redistributes the data, or data derived from it, must keep the same license, give attribution, and indicate changes. Commercial use of the data requires contacting MVTec (see the `readme.txt` shipped with the dataset).
+
+If you use the dataset in scientific work, please cite: Paul Bergmann, Michael Fauser, David Sattlegger, Carsten Steger, *A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection*, IEEE CVPR 2019.
+
 ## References
 
-- P. Bergmann et al., *MVTec AD: A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection*, CVPR 2019.
+- P. Bergmann, M. Fauser, D. Sattlegger, C. Steger, *A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection* (MVTec AD), CVPR 2019.
 - T. Defard et al., *PaDiM: a Patch Distribution Modeling Framework for Anomaly Detection and Localization*, 2020.
 - K. Roth et al., *Towards Total Recall in Industrial Anomaly Detection* (PatchCore), CVPR 2022.

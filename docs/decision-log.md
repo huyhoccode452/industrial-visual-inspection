@@ -7,7 +7,7 @@
 - Phương án bỏ qua:
   - Commit thẳng ảnh vào repo: repo phình to, clone chậm, và dữ liệu đã vào lịch sử git thì rất khó gỡ ra.
   - Git LFS: thêm một công cụ phải cài, và có hạn mức dung lượng/băng thông.
-  - Mirror lên Google Drive cá nhân: phải duy trì link, và còn phụ thuộc license MVTec AD có cho phát lại dataset hay không (cần đọc license ở task B1).
+  - Mirror lên Google Drive cá nhân: license MVTec AD (CC BY-NC-SA 4.0) cho phép chia sẻ lại nhưng chỉ vì mục đích phi thương mại, phải ghi nguồn và nếu chia sẻ bản đã chỉnh sửa thì giữ cùng loại license. Làm được, nhưng thêm việc phải duy trì link và tuân thủ điều kiện; dẫn người dùng về nguồn gốc thì đơn giản và an toàn hơn.
 
 ## 2. Không ghi local tag của PyTorch vào requirements
 - Bối cảnh: torch trong venv là `2.15.0+cpu`, trong khi `requirements.txt` cũ (dump từ môi trường khác) ghi `torch==2.5.1+cu121`. Máy mình có GPU RTX 2050 nhưng đang cài bản CPU.
