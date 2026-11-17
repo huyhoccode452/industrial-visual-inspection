@@ -26,8 +26,11 @@ htmlcov/
 # Bí mật
 .env
 *.sqlite3
-.pt
-.pth
+*.pt
+*.pth
 test?.jpg
 mlruns/*
 node_modules/
+*.zip
+*.tar.gz
+data/datasets/
