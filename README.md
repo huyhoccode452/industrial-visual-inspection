@@ -75,6 +75,11 @@ The script stops with an error if a category has no files in the archive, so a t
 | 5 | Inference module, FastAPI, React dashboard, Docker |
 | 6 | Final tables and figures, README, technical report, demo |
 
+## Week-1 baseline
+
+python scripts/run_baseline.py                          # all 5 categories
+python scripts/run_baseline.py --categories bottle screw
+python -m pytest -q                                      # unit tests
 ## License and attribution
 
 MVTec AD is copyright 2019 MVTec Software GmbH and is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). This project uses it for non-commercial research and education only. Anyone who redistributes the data, or data derived from it, must keep the same license, give attribution, and indicate changes. Commercial use of the data requires contacting MVTec (see the `readme.txt` shipped with the dataset).

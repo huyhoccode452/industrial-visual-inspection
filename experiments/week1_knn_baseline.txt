@@ -1,0 +1,5 @@
+bottle     image AUROC = 0.9865
+cable      image AUROC = 0.8780
+capsule    image AUROC = 0.8815
+metal_nut  image AUROC = 0.8368
+screw      image AUROC = 0.6592
