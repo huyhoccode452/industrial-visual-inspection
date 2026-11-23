@@ -31,8 +31,8 @@ def test_hand_example_matches_notes():
     scores = mahalanobis_map(test, mean, inv_cov).reshape(2)
     assert torch.allclose(scores, torch.tensor([6.0, 1.5]).sqrt(), atol=1e-5)
 
-class FakeExtractor:
-    def __call__(self, x):
+class FakeExtractor(torch.nn.Module):
+    def forward(self, x):
         b = x.shape[0]
         return {"layer2": torch.randn(b, 512, 28, 28), "layer3": torch.randn(b, 1024, 14, 14)}
 

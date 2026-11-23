@@ -22,7 +22,7 @@ def fit_gaussians(emb, eps=0.01):
     mean = x.mean(dim=0)                             # (C, HW): trung bình qua N ảnh
     centered = x - mean
     cov = torch.einsum("nci,ndi->icd", centered, centered) / (n - 1)   # (HW, C, C)
-    cov = cov + eps * torch.eye(c)
+    cov = cov + eps * torch.eye(c, device=emb.device)
     inv_cov = torch.linalg.inv(cov)
     return mean, inv_cov
 
@@ -35,14 +35,15 @@ def mahalanobis_map(emb, mean, inv_cov):
     return d2.clamp(min=0).sqrt().reshape(b, h, w)
 
 class PaDiM:
-    def __init__(self, extractor, rd=100, eps=0.01, seed=42):
-        self.extractor = extractor
-        self.idx = make_channel_index(1536, rd, seed)
+    def __init__(self, extractor, rd=100, eps=0.01, seed=42, device = "cpu"):
+        self.extractor = extractor.to(device)
+        self.idx = make_channel_index(1536, rd, seed).to(device)
         self.eps = eps
+        self.device = device
 
     @torch.no_grad()
     def _embed(self, images):
-        return build_embedding(self.extractor(images), self.idx)
+        return build_embedding(self.extractor(images.to(self.device)), self.idx)
 
     def fit(self, loader):
         embs = [self._embed(image) for image, mask, label, path in loader]
