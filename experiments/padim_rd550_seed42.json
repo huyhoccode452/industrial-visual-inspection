@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-23T09:45:00",
+  "git_commit": "3239ad3881bdbbe7de0d96d6df0b01c5c812570e",
+  "device": "cuda",
+  "torch": "2.14.1+cu130",
+  "config": {
+    "backbone": "wide_resnet50_2",
+    "layers": [
+      "layer2",
+      "layer3"
+    ],
+    "rd": 550,
+    "eps": 0.01,
+    "seed": 42,
+    "resize": 256,
+    "crop": 224,
+    "blur_sigma": 4.0
+  },
+  "results": {
+    "bottle": {
+      "n_train": 188,
+      "n_test": 83,
+      "image_auroc": 0.9984126984126984,
+      "pixel_auroc": 0.9808402430294274
+    },
+    "cable": {
+      "n_train": 202,
+      "n_test": 150,
+      "image_auroc": 0.9087331334332833,
+      "pixel_auroc": 0.9667560836291929
+    },
+    "capsule": {
+      "n_train": 197,
+      "n_test": 132,
+      "image_auroc": 0.9098524132429199,
+      "pixel_auroc": 0.9851319457245316
+    },
+    "metal_nut": {
+      "n_train": 198,
+      "n_test": 115,
+      "image_auroc": 0.9872922776148583,
+      "pixel_auroc": 0.9706013738292998
+    },
+    "screw": {
+      "n_train": 288,
+      "n_test": 160,
+      "image_auroc": 0.8796884607501536,
+      "pixel_auroc": 0.9834423453488901
+    }
+  },
+  "mean": {
+    "image_auroc": 0.9367957966907827,
+    "pixel_auroc": 0.9773543983122683
+  }
+}
