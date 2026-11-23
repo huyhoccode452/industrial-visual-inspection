@@ -23,7 +23,7 @@ def fit_gaussians(emb, eps=0.01):
     centered = x - mean
     cov = torch.einsum("nci,ndi->icd", centered, centered) / (n - 1)   # (HW, C, C)
     cov = cov + eps * torch.eye(c, device=emb.device)
-    inv_cov = torch.linalg.inv(cov)
+    inv_cov = torch.linalg.inv(cov.cpu().double()).float().to(emb.device)
     return mean, inv_cov
 
 
